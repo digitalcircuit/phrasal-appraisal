@@ -1,0 +1,3 @@
+[run]
+source = phrasalappraisal
+omit = phrasalappraisal/test*
