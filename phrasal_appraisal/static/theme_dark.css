@@ -1,0 +1,107 @@
+/* General */
+body {
+  color: #ffffff;
+  background: #461900;
+}
+
+.starter-template .logo-light {
+  display: block;
+}
+.starter-template .logo-dark {
+  display: none;
+}
+.starter-template .content h1 .smaller {
+  color: #f2d4b7;
+}
+.starter-template .content .lead {
+  color: #f2d4b7;
+}
+.starter-template .content .lead .font-normal {
+  color: #ffffff;
+}
+.starter-template .content-form {
+  color: #ffffff;
+}
+/* Messages */
+.starter-template .message-detail-entry {
+  border: 1px solid #333333;
+  background-color: rgba(255,255,255,0.14);
+  color: #d6d6d6;
+}
+/* Phrase results */
+.starter-template .phrase-results {
+  border: 1px solid #333;
+  background-color: rgba(255,255,255,0.04);
+}
+.starter-template .phrase-results-highlight {
+  border: 1px dashed rgba(255,255,255,0.3);
+}
+.starter-template .phrase-results-depth-1 {
+  background-color: #2e1800;
+}
+.starter-template .phrase-results-depth-2 {
+  background-color: #3d1e00;
+}
+.starter-template .phrase-results-depth-3 {
+  background-color: #522900;
+}
+.starter-template .phrase-results-depth-4 {
+  background-color: #663300;
+}
+.starter-template .phrase-results-depth-5 {
+  /* Also used for light theme: 994d00 */
+  background-color: #7a3e00;
+}
+.starter-template .phrase-results-depth-6 {
+  background-color: #8f4800;
+}
+.starter-template .phrase-results-depth-7 {
+  background-color: #a35200;
+}
+.starter-template .phrase-results-depth-8 {
+  background-color: #b85c00;
+}
+.starter-template .phrase-results-depth-max {
+  background-color: #c46300;
+}
+.starter-template .phrase-results-normal {
+}
+.starter-template .phrase-seed-content {
+  color: #ffffff;
+  border: 1px solid #333;
+  background-color: rgba(255,255,255,0.04);
+}
+/* Footer */
+.starter-template .links ul li.current-version {
+  color: #f2d4b7;
+}
+.starter-template .links ul li a, a {
+  color: #f2d4b7;
+}
+.starter-template .links ul li a:hover, a:hover {
+  color: #ffffff;
+}
+.starter-template .links ul li .icon-muted {
+  color: #ebbb8b;
+}
+.starter-template .links ul li:hover .icon-muted {
+  color: #ffffff;
+}
+.starter-template .powered-by {
+  color: #f2d4b7;
+}
+.starter-template .copyright {
+  color: #f2d4b7;
+}
+
+/* Override Bootstrap theme with darker colors */
+/* Might need to use '!important' */
+.form-control {
+	color: rgb(245, 245, 245);
+	background-color: #333333;
+	border: 1px solid rgba(0, 0, 0, 0.15);
+}
+/* Override Bootstrap theme */
+.form-control[disabled], .form-control[readonly], fieldset[disabled] .form-control {
+	background-color: #454545;
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="{{request.locale_name}}" metal:define-macro="layout">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Phrase template builder">
+    <meta name="author" content="Shane">
+    <link rel="shortcut icon" href="${request.static_url('phrasal_appraisal:static/icon/phrasal_favicon.png')}" sizes="32x32">
+
+    <title>Phrasal Appraisal - phrase template builder</title>
+
+    <!-- Bootstrap core CSS -->
+    <!-- [Default theme] -->
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    -->
+    <!-- [United theme] -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/united/bootstrap.min.css" rel="stylesheet ${'alternate' if request.headers.get('X-Dark-Mode', '') else ''}" integrity="sha384-pVJelSCJ58Og1XDc2E95RVYHZDPb9AVyXsI8NoVpB2xmtxoZKJePbMfE4mlXw7BJ" crossorigin="anonymous" title="Light">
+    <!-- [Cyborg theme] -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/cyborg/bootstrap.min.css" rel="stylesheet ${'alternate' if not request.headers.get('X-Dark-Mode', '') else ''}" integrity="sha384-D9XILkoivXN+bcvB2kSOowkIvIcBbNdoDQvfBNsxYAIieZbx8/SI4NeUvrRGCpDi" crossorigin="anonymous" title="Dark">
+
+    <!-- Custom styles for this scaffold -->
+    <link href="${request.static_url('phrasal_appraisal:static/theme.css')}" rel="stylesheet">
+    <link href="${request.static_url('phrasal_appraisal:static/theme_light.css')}" rel="stylesheet ${'alternate' if request.headers.get('X-Dark-Mode', '') else ''}" title="Light">
+    <link href="${request.static_url('phrasal_appraisal:static/theme_dark.css')}" rel="stylesheet ${'alternate' if not request.headers.get('X-Dark-Mode', '') else ''}" title="Dark">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.jsdelivr.net/html5shiv/3.7.3/html5shiv.min.js" integrity="sha256-3Jy/GbSLrg0o9y5Z5n1uw0qxZECH7C6OQpVBgNFYa0g=" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/respond/1.4.2/respond.min.js" integrity="sha256-g6iAfvZp+nDQ2TdTR/VVKJf3bGro4ub5fvWSWVRi2NE=" crossorigin="anonymous"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="starter-template">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-2">
+            <img class="logo logo-dark img-responsive" src="${request.static_url('phrasal_appraisal:static/icon/phrasal_dark.svg')}" alt="pyramid web framework">
+            <img class="logo logo-light img-responsive" src="${request.static_url('phrasal_appraisal:static/icon/phrasal_light.svg')}" alt="pyramid web framework">
+          </div>
+          <div class="col-md-10">
+            <div metal:define-slot="content">No content</div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="links">
+            <ul>
+              <li><span class="powered-by">powered by&nbsp;</span><a href="https://trypyramid.com/" rel="external nofollow">Pyramid</a></li>
+              <li><span class="powered-by">built from&nbsp;</span><a href="https://github.com/Pylons/pyramid-cookiecutter-starter" rel="external nofollow">Cookiecutter</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="row">
+          <div class="copyright">
+            Starter content copyright &copy; Pylons Project
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://cdn.jsdelivr.net/jquery/3.2.1/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  </body>
+</html>

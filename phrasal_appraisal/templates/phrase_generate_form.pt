@@ -1,0 +1,66 @@
+<div metal:use-macro="load: layout.pt">
+    <div metal:fill-slot="content">
+
+        <div class="content">
+            <h1><span class="font-semi-bold">Phrasal Appraisal</span> <span class="smaller">Phrase builder</span></h1>
+            <p class="lead">Enter a group of phrases and tap&nbsp;<span class="font-normal">Submit</span>, or tap&nbsp;<span class="font-normal">Demo</span> for an example.</p>
+
+            <div class="content-form">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Phrase group: ${phrase_group.title}</h3>
+                    </div>
+                    <div class="panel-body">
+                        <div id="form" tal:content="structure form"/>
+                    </div>
+                </div>
+                <div id="results"></div>
+                <div tal:condition="exists: parsed_msgs" class="messages">
+                    <div tal:condition="python: parsed_msgs" tal:repeat="msg parsed_msgs">
+                        <div tal:condition="python: msg" class="panel panel-${python: msg.msg_class}">
+                            <div class="panel-heading">
+                                <h3 tal:condition="python: msg.title" class="panel-title">${msg.title}</h3>
+                            </div>
+                            <div class="panel-body">
+                                <p class="message-main">${msg.message}</p>
+                                <div tal:condition="python: msg.details" class="message-detail-group">
+                                    <div tal:repeat="detail_entry msg.details" class="phrase-group">
+                                        <pre tal:condition="python: detail_entry" class="message-detail-entry">${detail_entry}</pre>
+                                    </div>
+                                </div>
+                            </div>
+                        <!-- -->
+                        </div>
+                    </div>
+                </div>
+                <div tal:condition="python: phrase_group.results" class="panel panel-success">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Generated phrase${'s' if len(phrase_group.results) is not 1 else ''}</h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="phrase-groups" id="generated_phrase">
+                            <div tal:repeat="phrase phrase_group.results" class="phrase-group">
+                                <p tal:condition="python: phrase.title" class="phrase-group-title">${phrase.title}</p>
+                                <div class="phrase-results highlight">
+                                    <tal:block tal:repeat="item phrase.result"><span class="phrase-results-${'highlight' if isinstance(item, dict) and item['choice_level'] else 'normal'} ${'phrase-results-depth-' + str(item['choice_level']) if isinstance(item, dict) and item['choice_level'] else ''} ${'phrase-results-depth-max' if isinstance(item, dict) and item['choice_level'] and item['choice_level'] > 8 else ''}">${item.result | item}</span></tal:block>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 'seed' is stored in the root of the group -->
+                        <div tal:condition="python: phrase_group.seed">
+                            <label class="phrase-seed-note" for="generated_seed">Seed for random choices:</label>
+                            <pre class="phrase-seed-content" id="generated_seed">${phrase_group.seed}</pre>
+                        </div>
+                        <br>
+                        <a href="#">Back to top</a>
+                    </div>
+                </div>
+                <script type="text/javascript">
+                    deform.load()
+                </script>
+            </div>
+
+        </div>
+
+    </div>
+</div>

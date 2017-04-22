@@ -11,6 +11,7 @@ with open(os.path.join(here, 'CHANGES.txt')) as f:
 requires = [
     'pyramid',
     'pyramid_chameleon',
+    'deform',
     'pyramid_debugtoolbar',
     'waitress',
 ]
@@ -22,8 +23,8 @@ tests_require = [
 ]
 
 setup(
-    name='phrasalappraisal',
-    version='0.0',
+    name='phrasal_appraisal',
+    version='0.1',
     description='Phrasal Appraisal',
     long_description=README + '\n\n' + CHANGES,
     classifiers=[
@@ -32,10 +33,10 @@ setup(
         'Topic :: Internet :: WWW/HTTP',
         'Topic :: Internet :: WWW/HTTP :: WSGI :: Application',
     ],
-    author='',
-    author_email='',
+    author='Shane Synan',
+    author_email='digitalcircuit36939@gmail.com',
     url='',
-    keywords='web pyramid pylons',
+    keywords='web pyramid pylons phrasal templates generator',
     packages=find_packages(),
     include_package_data=True,
     zip_safe=False,
@@ -45,7 +46,7 @@ setup(
     install_requires=requires,
     entry_points={
         'paste.app_factory': [
-            'main = phrasalappraisal:main',
+            'main = phrasal_appraisal:main',
         ],
     },
 )

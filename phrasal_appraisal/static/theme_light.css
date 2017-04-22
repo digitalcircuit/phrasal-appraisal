@@ -1,0 +1,94 @@
+/* General */
+body {
+  color: #000000;
+  background: rgb(245, 245, 245);
+}
+
+.starter-template .logo-dark {
+  display: block;
+}
+.starter-template .logo-light {
+  display: none;
+}
+.starter-template .content h1 .smaller {
+  color: #7a3e00;
+}
+.starter-template .content .lead {
+  color: #7a3e00;
+}
+.starter-template .content .lead .font-normal {
+  color: #000000;
+}
+.starter-template .content-form {
+  color: #000000;
+}
+/* Messages */
+.starter-template .message-detail-entry {
+  border: 1px solid #cccccc;
+  background-color: #f5f5f5;
+  color: #333333;
+}
+/* Phrase results */
+.starter-template .phrase-results {
+  border: 1px solid #ccc;
+  background-color: rgba(0,0,0,0.04);
+}
+.starter-template .phrase-results-highlight {
+  border: 1px dashed rgba(0,0,0,0.2);
+}
+.starter-template .phrase-results-depth-1 {
+  background-color: #f7e8d9;
+}
+.starter-template .phrase-results-depth-2 {
+  background-color: #f7dcc1;
+}
+.starter-template .phrase-results-depth-3 {
+  background-color: #f7cfa8;
+}
+.starter-template .phrase-results-depth-4 {
+  background-color: #f7c38f;
+}
+.starter-template .phrase-results-depth-5 {
+  background-color: #f7b777;
+}
+.starter-template .phrase-results-depth-6 {
+  background-color: #f7aa5e;
+}
+.starter-template .phrase-results-depth-7 {
+  background-color: #f79e45;
+}
+.starter-template .phrase-results-depth-8 {
+  background-color: #f7922c;
+}
+.starter-template .phrase-results-depth-max {
+  background-color: #f77c00;
+}
+.starter-template .phrase-results-normal {
+}
+.starter-template .phrase-seed-content {
+  color: #000000;
+  border: 1px solid #ccc;
+  background-color: rgba(0,0,0,0.04);
+}
+/* Footer */
+.starter-template .links ul li.current-version {
+  color: #7a3e00;
+}
+.starter-template .links ul li a, a {
+  color: #7a3e00;
+}
+.starter-template .links ul li a:hover, a:hover {
+  color: #000000;
+}
+.starter-template .links ul li .icon-muted {
+  color: #ebbb8b;
+}
+.starter-template .links ul li:hover .icon-muted {
+  color: #000000;
+}
+.starter-template .powered-by {
+  color: #7a3e00;
+}
+.starter-template .copyright {
+  color: #7a3e00;
+}

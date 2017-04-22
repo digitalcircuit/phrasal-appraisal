@@ -19,7 +19,7 @@ class ViewTests(unittest.TestCase):
 
 class FunctionalTests(unittest.TestCase):
     def setUp(self):
-        from phrasalappraisal import main
+        from phrasal_appraisal import main
         app = main({})
         from webtest import TestApp
         self.testapp = TestApp(app)
